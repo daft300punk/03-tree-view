@@ -26,7 +26,7 @@ export const addChild = (nodeId, childId) => ({
   childId,
 });
 
-export removeChild = (nodeId, childId) => ({
+export const removeChild = (nodeId, childId) => ({
   type: REMOVE_CHILD,
   nodeId,
   childId

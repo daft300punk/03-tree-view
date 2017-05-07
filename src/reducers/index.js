@@ -5,7 +5,7 @@ const childIds = (state, action) => {
     case ADD_CHILD:
       return [ ...state, action.childId ];
     case REMOVE_CHILD:
-      return state.filter(id => id != action.childId);
+      return state.filter(id => id !== action.childId);
     default:
       return state;
   }
@@ -59,6 +59,6 @@ export default (state = {}, action) => {
 
   return {
     ...state,
-    [nodeId]: node(state[nodeId], action);
+    [nodeId]: node(state[nodeId], action)
   }
 }
